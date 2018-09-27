@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<style>
+body{
+	margin:0;
+	padding-bottom: 0;
+}
+	.navbar-brand img{
+		max-width: 50%
+	}
+	.navbar{
+		border-bottom:4px solid #009A9A;
+	}
+	.logo-food img{
+		width: 130px;
+	}
+	.news-item{
+		overflow: hidden;
+	}
+	.news-item h3{
+		font-size:18px;
+		color:#05b594;
+	}
+	.xemthem{
+		position:relative;
+		height:60px;
+		background-color:#009a9a	}
+	.xemthem p{
+		position:relative;
+		z-index:3;
+		line-height: 60px;
+		left:10px;
+		color:white;
+		font-size:20px;
+	}
+	.xemthem img{
+		position:absolute;
+		height:100%;
+		top:0;
+		right:0px;
+		transition:all 0.5s;
+	}
+	.xemthem:hover .scroll-img {
+		right:-100px;
+	}
+	.news-item > img{
+		height:200px
+	}
+</style>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark  p-1">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand p-0">
+          <img src="img/ph7-logo_5.png" alt="" >
+        </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" >
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item px-3 py-2">
+              <a href="#" class="nav-link text-dark font-weight-bold" data-toggle="popover" data-html="true" data-placement="left" title="<p class='text-center'>Language</p>" data-content="
+              	<div class='py-2 px-3 text-center'>
+              		<p><a href='https://www.youtube.com/watch?v=vRu6RF4xOLQ'>English</a></p>
+              		
+              		<p><a href=''>Vietnamese</a></p>
+				</div>
+              	">Ngôn ngữ</a>
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a href="#" class="nav-link text-dark font-weight-bold">Product</a>
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a href="#" class="nav-link text-dark font-weight-bold">Product</a>
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a href="#" class="nav-link text-dark font-weight-bold" data-toggle="modal" data-target="#modal-dang-nhap">Sign In</a>
+            </li>
+            <li class="nav-item px-3 py-2">
+              <a href="#" class="nav-link text-dark font-weight-bold">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+	</nav>
+	
+	<div class="carousel slide" id="carousel" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li class="active" data-slide-to="0" data-target="#carousel"></li>
+			<li data-slide-to="1" data-target="#carousel"></li>
+			<li data-slide-to="2" data-target="#carousel"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="img/slider1.jpg" class="d-block w-100">
+			</div>
+			<div class="carousel-item">
+					<img src="img/slider2.jpg" class="d-block w-100">
+			</div>
+			<div class="carousel-item">
+					<img src="img/slider3.jpg" class="d-block w-100">
+			</div>
+		</div>
+		<a href="#carousel" class="carousel-control-prev" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a href="#carousel" class="carousel-control-next" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h4 class="text-dark text-center display-4 mt-5">Better preservation, greater presence</h4>
+			</div>
+			<div class="col-12 logo-food">
+				<ul class="nav align-items-center justify-content-between nav-tabs">
+					<li class="text-center"  >
+						<a href="#nhuyen-the" data-toggle="tab">
+							<img src="img/food-1.jpg"><br>
+							<span>Nhuyễn Thể</span>
+						</a>
+						
+					</li>
+					<li class="text-center"  >
+						<a href="#ca" data-toggle="tab">
+							<img src="img/food-1.jpg"><br>
+							<span>Nhuyễn Thể</span>
+						</a>
+						
+					</li>
+					<li class="text-center"  >
+						<a href="#ga" data-toggle="tab">
+							<img src="img/food-1.jpg"><br>
+							<span>Nhuyễn Thể</span>
+						</a>
+						
+					</li>
+					<li class="text-center"  >
+						<a href="#vit" data-toggle="tab">
+							<img src="img/food-1.jpg"><br>
+							<span>Nhuyễn Thể</span>
+						</a>
+						
+					</li>
+					<li class="text-center"  >
+						<a href="#cho" data-toggle="tab">
+							<img src="img/food-1.jpg"><br>
+							<span>Nhuyễn Thể</span>
+						</a>
+						
+					</li>
+					<li class="text-center"  >
+						<a href="#meo" data-toggle="tab">
+							<img src="img/food-1.jpg"><br>
+							<span>Nhuyễn Thể</span>
+						</a>
+						
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="tab-content mt-5">
+			<div class="tab-pane active" id="nhuyen-the">
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-hover table-striped">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Squid</th>
+									<th>Octopus</th>
+									<th>Cuttlefish</th>
+									<th>Crustaceans</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Moisture retainers</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+
+								</tr>
+								<tr>
+									<td>Texturing agent</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			<div class="tab-pane " id="ca">
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-dark">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Squid</th>
+									<th>Octopus</th>
+									<th>Cuttlefish</th>
+									<th>Crustaceans</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Moisture retainers</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+
+								</tr>
+								<tr>
+									<td>Texturing agent</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			<div class="tab-pane " id="ga">
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-secondary">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Squid</th>
+									<th>Octopus</th>
+									<th>Cuttlefish</th>
+									<th>Crustaceans</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Moisture retainers</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+
+								</tr>
+								<tr>
+									<td>Texturing agent</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			<div class="tab-pane " id="vit">
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-primary">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Squid</th>
+									<th>Octopus</th>
+									<th>Cuttlefish</th>
+									<th>Crustaceans</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Moisture retainers</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+
+								</tr>
+								<tr>
+									<td>Texturing agent</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			<div class="tab-pane " id="cho">
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-warning">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Squid</th>
+									<th>Octopus</th>
+									<th>Cuttlefish</th>
+									<th>Crustaceans</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Moisture retainers</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+
+								</tr>
+								<tr>
+									<td>Texturing agent</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+			<div class="tab-pane " id="meo">
+				<div class="row">
+					<div class="col-12">
+						<table class="table table-info">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Squid</th>
+									<th>Octopus</th>
+									<th>Cuttlefish</th>
+									<th>Crustaceans</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Moisture retainers</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+									<td>T10 SEA<br>T20 SEA</td>
+
+								</tr>
+								<tr>
+									<td>Texturing agent</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+									<td>	AQUAGLY</td>
+
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+    </div>
+    
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-12 mb-5">
+				<h1 class="display-4 text-center mt-5">About Us</h1>
+			</div>
+			<div class="col-8">
+				<div class="card mb-2">
+					<div class="card-header">
+						<h5 data-toggle="collapse" data-target="#founded">Quá trình thành lập</h5>
+					</div>
+					<div class="collapse show" id="founded">
+						<div class="card-body">
+							<p class="card-text">Đội ngũ kĩ thuật lành nghề của PH7 bao gồm các chuyên gia trong lĩnh vực sinh học, hoá học, dược phẩm và dinh dưỡng sẽ luôn mang đến những công nghệ mới nhất hiện nay trong ngành xử lý và chế biến thực phẩm</p>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-2">
+					<div class="card-header">
+						<h5 data-toggle="collapse" data-target="#founded-2">Dịch vụ toàn quốc</h5>
+					</div>
+					<div class="collapse" id="founded-2">
+						<div class="card-body">
+							<p class="card-text">Đội ngũ kĩ thuật lành nghề của PH7 bao gồm các chuyên gia trong lĩnh vực sinh học, hoá học, dược phẩm và dinh dưỡng sẽ luôn mang đến những công nghệ mới nhất hiện nay trong ngành xử lý và chế biến thực phẩm</p>
+						</div>
+					</div>
+				</div>
+				<div class="card mb-2">
+					<div class="card-header">
+						<h5 data-toggle="collapse" data-target="#founded-3">Chất lượng</h5>
+					</div>
+					<div class="collapse" id="founded-3">
+						<div class="card-body">
+							<p class="card-text">Đội ngũ kĩ thuật lành nghề của PH7 bao gồm các chuyên gia trong lĩnh vực sinh học, hoá học, dược phẩm và dinh dưỡng sẽ luôn mang đến những công nghệ mới nhất hiện nay trong ngành xử lý và chế biến thực phẩm</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+				<img src="img/ph7-man.jpg" class="img-fluid" style="height:300px;">
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="display-4 text-center my-5">News & Events</h1>
+			</div>
+			<div class="col-md-4">
+				<div class="card news-item">
+					<img src="img/aditivos_para_pescado_opt.jpg" class="img-fluid">
+					<div class="card-body">
+						<h3>FOOD ADDITIVES: CHARACTERISTICS AND PURPOSE</h3>
+						<p class="border-bottom pb-4 mb-2">
+							<i class="fas fa-calendar-alt" ></i>
+							<span>12/01/2017</span>
+						</p>
+						<div class="xemthem" >
+							<p>Xem thêm <i class="fas fa-long-arrow-alt-right"></i></p>
+							<img src="img/scroll.png" class="img-fluid scroll-img">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card news-item">
+					<img src="img/img_6507.jpg" class="img-fluid">
+					<div class="card-body">
+						<h3>FOOD ADDITIVES: CHARACTERISTICS AND PURPOSE</h3>
+						<p class="border-bottom pb-4 mb-2">
+							<i class="fas fa-calendar-alt"></i>
+							<span>12/01/2017</span>
+						</p>
+						
+						<div class="xemthem" >
+							<p>Xem thêm <i class="fas fa-long-arrow-alt-right"></i></p>
+							<img src="img/scroll.png" class="img-fluid scroll-img">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card news-item">
+					<img src="img/img_2071.jpg" class="img-fluid">
+					<div class="card-body">
+						<h3>FOOD ADDITIVES: CHARACTERISTICS AND PURPOSE</h3>
+						<p class="border-bottom pb-4 mb-2" data-toggle="tooltip" data-placement="bottom" title="hieu dep trai">
+							<i class="fas fa-calendar-alt"></i>
+							<span>12/01/2017</span>
+						</p>
+						
+						<div class="xemthem" data-toggle="tooltip">
+							<p>Xem thêm <i class="fas fa-long-arrow-alt-right"></i></p>
+							<img src="img/scroll.png" class="img-fluid scroll-img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-dang-nhap">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="">Form Đăng nhập</h3>
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+									<i class="fas fa-user"></i>
+								</span>
+							</div>
+							<input type="text" class="form-control">
+						</div>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+									<i class="fas fa-key"></i>
+								</span>
+							</div>
+							<input type="text" class="form-control">
+						</div>
+						<div class="text-center">
+							<button class="btn btn-success" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/fontawesome-all.js"></script>
+<script type="text/javascript">
+  $('[data-toggle="tooltip"]').tooltip()
+  $('[data-toggle="popover"]').popover()
+</script>
+</body>
+</html>
